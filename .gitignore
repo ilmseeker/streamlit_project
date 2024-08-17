@@ -1,6 +1,6 @@
 # Environments
-main_code/env/
-main_code/env/.env
+**/env/**
+# main_code/env/.env
 .venv
 venv/
 ENV/
