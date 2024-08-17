@@ -10,7 +10,7 @@ st.set_page_config(page_title="Chat Page",
                    initial_sidebar_state="collapsed")
 # add_page_title()
 
-show_pages_from_config("pages.toml")
+show_pages_from_config("main_code//ui//pages.toml")
 
 cols = st.columns([6,2,2])
 with cols[0]:

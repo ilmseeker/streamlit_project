@@ -9,9 +9,7 @@ st.set_page_config(page_title="Chat Page",
 
 st.title("Chat")
 
-show_pages_from_config(
-    "pages.toml"
-)
+show_pages_from_config("main_code//ui//pages.toml")
 
 left, right = st.columns(2, vertical_alignment="top")
 with left:

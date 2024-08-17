@@ -9,9 +9,7 @@ st.set_page_config(page_title="Upload Page",
 
 st.title("Upload your documents")
 
-show_pages_from_config(
-    "pages.toml"
-)
+show_pages_from_config("main_code//ui//pages.toml")
 
 left, right = st.columns(2, vertical_alignment="top")
 with left:
