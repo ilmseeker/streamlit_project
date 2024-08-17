@@ -15,11 +15,11 @@ show_pages_from_config("main_code//ui//pages.toml")
 # add_page_title()
 
 url = "C:\\Users\\sajja\\OneDrive\\XPS\\Desktop\\images.png"
-url_cevia = "C:\\shk\\DSP\\LLM\\RAG\\cevia_website.jpeg"
+
 # st.logo("https://github.com/ilmseeker/images/blob/23b228a94ea9b11e7467495b0b5e8455bbfeefb1/ilmseeker.png")
 # add_logo("https://github.com/ilmseeker/images/blob/86530031c7f918bd6f84793e3e62fa6912bf2d31/images.png")
 # add_logo(url)
-st.sidebar.image(url_cevia, use_column_width=True)
+st.sidebar.image(url, use_column_width=True)
 
 cols = st.columns([6,2,2])
 with cols[1]:
