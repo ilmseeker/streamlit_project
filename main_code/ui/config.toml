@@ -1,8 +1,0 @@
-[client]
-showErrorDetails = false
-showSidebarNavigation = false
-toolbarMode = "minimal"
-
-[theme]
-primaryColor = "#F63366"
-backgroundColor = "black"

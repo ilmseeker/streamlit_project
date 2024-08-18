@@ -4,12 +4,12 @@ from streamlit_extras.switch_page_button import switch_page
 st.set_page_config(page_title="Chat Page", 
                    page_icon=":robot_face:", 
                    layout="wide",
-                   initial_sidebar_state="collapsed")
-# add_page_title()
+                #    initial_sidebar_state="collapsed"
+                   )
 
 st.title("Chat")
 
-show_pages_from_config("main_code//ui//pages.toml")
+show_pages_from_config("main_code\\ui\\pages.toml")
 
 left, right = st.columns(2, vertical_alignment="top")
 with left:

@@ -1,11 +1,25 @@
+import os, sys
+# Get the path to the 'Streamlit_Project' directory
+project_root = os.path.dirname(
+    os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
+
+# Add the project root to sys.path if it's not already there
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from streamlit_extras.let_it_rain import rain
+st.set_page_config(page_title="Page Title", 
+                   page_icon="Icon", 
+                   layout="wide", 
+                   initial_sidebar_state="collapsed"
+                   )
 
-st.set_page_config(page_title="About Page", 
-                   page_icon="🎈️", 
-                   layout="wide",
-                   initial_sidebar_state="collapsed")
+
+from main_code.css.css import button_style
 
 st.markdown( 
     """ <style> [data-testid="collapsedControl"] { display: none } </style> """, 
@@ -27,34 +41,4 @@ with cols[1]:
 if button2:
     switch_page("home")
 
-# Define custom CSS for button styling
-button_style = """
-    <style>
-    .stButton>button {
-        color: white;
-        background-color: #4CAF50; /* Green */
-        border: none;
-        padding: 10px 24px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        border-radius: 8px;
-    }
-    .stButton>button:hover {
-        background-color: #45a049; /* Darker green on hover */
-    }
-    .stButton.red-button>button {
-        background-color: #f44336; /* Red */
-    }
-    .stButton.red-button>button:hover {
-        background-color: #da190b; /* Darker red on hover */
-    }
-    </style>
-    """
 st.markdown(button_style, unsafe_allow_html=True)
-
-

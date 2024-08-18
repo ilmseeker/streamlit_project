@@ -1,24 +1,22 @@
-import streamlit as st
-from st_pages import Page, add_page_title, show_pages_from_config
-from streamlit_extras.switch_page_button import switch_page
-# from streamlit_extras.app_logo import add_logo
-# from streamlit_extras.stateful_button import button
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-st.set_page_config(page_title="Home Page", 
-                   page_icon="🏠", 
+import streamlit as st
+from st_pages import Page, add_page_title, show_pages_from_config, hide_pages
+from streamlit_extras.switch_page_button import switch_page
+
+st.set_page_config(page_title="Page Title", 
+                   page_icon="Icon", 
                    layout="wide", 
                 #    initial_sidebar_state="collapsed"
                    )
 
-show_pages_from_config("main_code//ui//pages.toml")
+hide_pages(["Upload", "Chat"])
 
-# add_page_title()
+show_pages_from_config("main_code\\ui\\pages.toml")
 
 url = "main_code\\images\\images.png"
 
-# st.logo("https://github.com/ilmseeker/images/blob/23b228a94ea9b11e7467495b0b5e8455bbfeefb1/ilmseeker.png")
-# add_logo("https://github.com/ilmseeker/images/blob/86530031c7f918bd6f84793e3e62fa6912bf2d31/images.png")
-# add_logo(url)
 st.sidebar.image(url, use_column_width=True)
 
 cols = st.columns([6,2,2])
@@ -47,31 +45,18 @@ st.divider()
 
 st.markdown(
 """
-## Welcome to your RAG Chatbot
+<h1 style='text-align:center; color:tomato; font-size:2vw; font-style:italic; font-weight:bold'>Welcome to custom QnA Chatbot</h1>
+<h1 style='text-align:center; color:tomato; font-size:2vw; font-style:italic'>Powered by LLM</h1> 
 
 ### Click one of the buttons at the :top: to proceed.
 
 **Streamlit is an open-source app framework built specifically for
 Machine Learning and Data Science projects.**
-**👈 Select a demo from the sidebar** to see some examples
-of what Streamlit can do!
+**👈 Select a page from the sidebar** to navigate to this web app pages!
 ### Want to learn more?
 - Check out [streamlit.io](https://streamlit.io)
-- Jump into our [documentation](https://docs.streamlit.io)
-- Ask a question in our [community
+- Jump into the [documentation](https://docs.streamlit.io)
+- Ask a question in Streamlit [community
     forums](https://discuss.streamlit.io)
-"""
+""", unsafe_allow_html=True
 )
-
-
-# pg.run()
-
-
-
-# file_path = "main_code/ui/pages.toml"
-# print(f"Attempting to read from: {os.path.abspath(file_path)}")
-# nav = get_nav_from_toml(file_path)
-
-# script_dir = os.path.dirname(os.path.abspath(__file__))
-# toml_path = os.path.join(script_dir, "ui", "pages.toml")
-# nav = get_nav_from_toml(toml_path)

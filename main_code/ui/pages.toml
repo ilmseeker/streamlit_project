@@ -1,24 +1,24 @@
 [[pages]]
-path = "main_code//ui//1_app.py"
+path = "main_code\\ui\\1_app.py"
 name = "Home"
 icon = "🏠"
 
 [[pages]]
-path = "main_code//ui//pages//2_login.py"
+path = "main_code\\ui\\pages\\2_login.py"
 name = "Login"
 icon = ":closed_lock_with_key:"
 
 [[pages]]
-path = "main_code//ui//pages//3_upload.py"
+path = "main_code\\ui\\pages\\3_upload.py"
 name = "Upload"
 icon = ":books:"
 
 [[pages]]
-path = "main_code//ui//pages//4_chat.py"
+path = "main_code\\ui\\pages\\4_chat.py"
 name = "Chat"
 icon = ":robot_face:"
 
 [[pages]]
-path = "main_code//ui//pages//5_about.py"
+path = "main_code\\ui\\pages\\5_about.py"
 name = "About"
 icon = "🎈️"
